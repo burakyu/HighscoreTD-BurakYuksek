@@ -3,7 +3,17 @@ guid: 3dc4a8b10371141e9b719f9ba0cc5e70
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Common
+    second: {fileID: 2100000, guid: 0395e4f622ec34e7e9d981deb0381dc5, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Gigantic_GradientPalette_B
+    second: {fileID: 2800000, guid: 2be513ef8bfd4440f897a6b7fa68ed31, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
