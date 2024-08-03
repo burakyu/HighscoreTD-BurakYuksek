@@ -85,7 +85,7 @@ PrefabInstance:
     - target: {fileID: 3421477383148576643, guid: 48d3d573e76ab46db821f66001ab0350,
         type: 3}
       propertyPath: m_Name
-      value: Tower Variant
+      value: Tower_Miner
       objectReference: {fileID: 0}
     - target: {fileID: 5889588684568161981, guid: 48d3d573e76ab46db821f66001ab0350,
         type: 3}
@@ -136,6 +136,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288760979277391777, guid: 48d3d573e76ab46db821f66001ab0350,
+        type: 3}
+      propertyPath: towerType
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
