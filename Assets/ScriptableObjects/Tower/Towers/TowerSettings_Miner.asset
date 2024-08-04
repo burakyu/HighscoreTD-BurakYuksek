@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: TowerSettings_Miner
   m_EditorClassIdentifier: 
   TowerType: 2
-  TowerPrefab: {fileID: 5889068153511803514, guid: 3a686824a81f4427ba8552f1ae3a12e7,
-    type: 3}
+  AttackRange: 6
   TowerPricesByCount: 14000000280000004600000078000000c80000002c01000090010000f40100008a020000ee020000840300004c04000014050000

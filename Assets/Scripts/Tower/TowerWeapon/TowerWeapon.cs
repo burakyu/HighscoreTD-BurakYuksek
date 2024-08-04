@@ -10,29 +10,28 @@ public abstract class TowerWeapon : MonoBehaviour
     [SerializeField] protected LayerMask targetLayer;
     [SerializeField] protected float shootInterval;
         
-    private GridPlacableTower _towerDraggable;
     private bool _isWeaponActive;
     private float _shootingTimer;
 
+    protected GridPlacableTower _towerDraggable;
     protected Tower _tower;
     
     public LayerMask TargetLayer => targetLayer;
     
     public abstract void Attack(Vector3 attackPoint);
-    public abstract void StopAttack();
-
+    
     private void Awake()
     {
         _tower = GetComponent<Tower>();
         _towerDraggable = GetComponent<GridPlacableTower>();
     }
 
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
         _towerDraggable.OnTowerPlaced += ChangeActivation;
     }
 
-    private void OnDisable()
+    protected virtual void OnDisable()
     {
         _towerDraggable.OnTowerPlaced -= ChangeActivation;
     }
@@ -53,7 +52,7 @@ public abstract class TowerWeapon : MonoBehaviour
         }
     }
 
-    private void ChangeActivation(bool active)
+    private void ChangeActivation(bool active, TowerGrid towerGrid)
     {
         _isWeaponActive = active;
     }

@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: TowerSettings_Bomber
   m_EditorClassIdentifier: 
   TowerType: 1
-  TowerPrefab: {fileID: 5445388471403110848, guid: 2630d386288ab475e879e7b7156566a3,
-    type: 3}
+  AttackRange: 6
   TowerPricesByCount: 0a00000019000000320000005000000078000000aa000000e60000002c01000090010000f40100008a020000bc02000084030000

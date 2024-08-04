@@ -288,3 +288,13 @@ MonoBehaviour:
     maximumInstances: 30
     poolType: 7
     pool: {fileID: 0}
+  - prefab: {fileID: 2622409810155131920, guid: 4305f3708683040b38df946f34671990,
+      type: 3}
+    maximumInstances: 20
+    poolType: 8
+    pool: {fileID: 0}
+  - prefab: {fileID: 2622409810155131920, guid: c6e1bfc04abac47869105fb2b0ebb3a9,
+      type: 3}
+    maximumInstances: 10
+    poolType: 9
+    pool: {fileID: 0}

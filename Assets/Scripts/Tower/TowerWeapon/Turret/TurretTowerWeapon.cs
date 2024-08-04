@@ -28,11 +28,6 @@ public class TurretTowerWeapon : TowerWeapon
         var bulletGo = PoolManager.Instance.Spawn(bulletPoolType, shootingPoint.position, Quaternion.LookRotation(dir));
         var projectile = bulletGo.GetComponent<TurretProjectile>();
     }
-    
-    public override void StopAttack()
-    {
-        
-    }
 
     public void FollowTarget(Transform target)
     {

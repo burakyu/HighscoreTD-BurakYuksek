@@ -49,8 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ffaa18844ec54e4c8f347a4e8db1939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ownerTowerSettings: {fileID: 11400000, guid: 6ea81e1f3c97a493f8e69ca89b29cd89,
-    type: 2}
+  ownerTowerSettings: {fileID: 11400000, guid: 6ea81e1f3c97a493f8e69ca89b29cd89, type: 2}
 --- !u!114 &7814954500654351873
 MonoBehaviour:
   m_ObjectHideFlags: 0

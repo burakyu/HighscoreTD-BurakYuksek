@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(TowerWeapon))]
@@ -21,7 +19,6 @@ public class TurretWeaponTargetTrigger : MonoBehaviour
 
     private void OnEnable()
     {
-        
         _towerDraggable.OnTowerPlaced += ChangeActivation;
     }
 
@@ -66,7 +63,7 @@ public class TurretWeaponTargetTrigger : MonoBehaviour
         return nearestObjectTransform;
     }
     
-    private void ChangeActivation(bool active)
+    private void ChangeActivation(bool active, TowerGrid towerGrid)
     {
         _availableForTargetCheck = active;
     }

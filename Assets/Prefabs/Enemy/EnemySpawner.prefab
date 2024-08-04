@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialDelay: 2
-  delayBetweenEnemies: 5
+  delayBetweenEnemies: 1
 --- !u!1001 &2513280713339290475
 PrefabInstance:
   m_ObjectHideFlags: 0

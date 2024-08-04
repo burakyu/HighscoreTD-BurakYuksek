@@ -14,7 +14,7 @@ public class GridPlacableTower : MonoBehaviour
     private Collider _currentGridCollider;
     private Tower _tower;
 
-    public event Action<bool> OnTowerPlaced;
+    public event Action<bool, TowerGrid> OnTowerPlaced;
     
     private void OnEnable()
     {
@@ -61,11 +61,12 @@ public class GridPlacableTower : MonoBehaviour
 
     private void PlaceToGrid()
     {
-        if (_currentGridCollider.GetComponent<TowerGrid>().PlaceToGrid(this))
+        TowerGrid towerGrid = _currentGridCollider.GetComponent<TowerGrid>();
+        if (towerGrid.PlaceToGrid(this))
         {
             _isDragging = false;
             _tower.SetPlaced();
-            OnTowerPlaced?.Invoke(true);
+            OnTowerPlaced?.Invoke(true, towerGrid);
         }
         else
         {

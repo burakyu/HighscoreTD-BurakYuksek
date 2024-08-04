@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -13,7 +14,7 @@ public class TowerCard : MonoBehaviour, IPointerDownHandler
     private Tween _holderMoveTween;
     
     public TowerType TowerType => towerType;
-    
+
     public void OnPointerDown(PointerEventData eventData)
     {
         Select();

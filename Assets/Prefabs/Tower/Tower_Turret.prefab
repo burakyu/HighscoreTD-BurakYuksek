@@ -193,11 +193,11 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3421477383148576643, guid: 48d3d573e76ab46db821f66001ab0350,
         type: 3}
-      insertIndex: -1
+      insertIndex: 4
       addedObject: {fileID: 4392201326822619060}
     - targetCorrespondingSourceObject: {fileID: 3421477383148576643, guid: 48d3d573e76ab46db821f66001ab0350,
         type: 3}
-      insertIndex: -1
+      insertIndex: 5
       addedObject: {fileID: 6478909833664456379}
     - targetCorrespondingSourceObject: {fileID: 3421477383148576643, guid: 48d3d573e76ab46db821f66001ab0350,
         type: 3}
@@ -233,7 +233,7 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 128
-  shootInterval: 1
+  shootInterval: 1.5
   targetTrigger: {fileID: 6478909833664456379}
   shootingPoint: {fileID: 3910891084649240984}
 --- !u!114 &6478909833664456379
@@ -248,7 +248,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85aa965cdb0a04c069848da0f627cbf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 6
 --- !u!54 &5135864402884647367
 Rigidbody:
   m_ObjectHideFlags: 0
