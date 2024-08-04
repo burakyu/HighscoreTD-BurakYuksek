@@ -14,7 +14,7 @@ public class TowerGrid : MonoBehaviour
     public void SelectPreview(bool show)
     {
         if (_currentGridTower != null) return;
-        
+
         defaultGridModel.gameObject.SetActive(!show);
         previewGridModel.gameObject.SetActive(show);
     }
@@ -22,17 +22,22 @@ public class TowerGrid : MonoBehaviour
     public bool PlaceToGrid(GridPlacableTower gridPlacableTower)
     {
         if (_currentGridTower != null) return false;
-        
+
+        int towerPrice = TowerManager.Instance.GetCurrentTowerPrice(gridPlacableTower.GetComponent<Tower>().TowerType);
+        if (!ResourceManager.Instance.HasEnoughResource(ResourceType.GoldCoin, towerPrice)) return false;
+
+        ResourceManager.Instance.TryTakeResources(ResourceType.GoldCoin, towerPrice);
         SelectPreview(false);
         _currentGridTower = gridPlacableTower;
         gridPlacableTower.transform.parent = transform;
         EventManager.TowerPlaced.Invoke(gridPlacableTower, this);
-        gridPlacableTower.transform.DOLocalJump(Vector3.zero, 2, 1, 0.25f)
-            .OnComplete(() =>
-            {
-                
-            });
+        gridPlacableTower.transform.DOLocalJump(Vector3.zero, 2, 1, 0.25f);
 
         return true;
+    }
+
+    public bool HasTower()
+    {
+        return _currentGridTower != null;
     }
 }

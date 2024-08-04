@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -14,6 +15,22 @@ public class TowerCard : MonoBehaviour, IPointerDownHandler
     private Tween _holderMoveTween;
     
     public TowerType TowerType => towerType;
+
+    private IEnumerator Start()
+    {
+        yield return new WaitUntil(() => TowerManager.Instance != null);
+        UpdatePriceText();
+    }
+
+    private void OnEnable()
+    {
+        EventManager.TowerPlaced.AddListener(UpdatePriceText);
+    }
+
+    private void OnDisable()
+    {
+        EventManager.TowerPlaced.RemoveListener(UpdatePriceText);
+    }
 
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -37,9 +54,10 @@ public class TowerCard : MonoBehaviour, IPointerDownHandler
         _holderMoveTween?.Kill();
         _holderMoveTween = holder.DOAnchorPosY(0, 0.2f);
     }
-
-    private void UpdatePriceText(int price)
+    
+    private void UpdatePriceText(GridPlacableTower tower = null, TowerGrid grid = null)
     {
-        priceHolder.SetPriceText(price);
+        int towerPrice = TowerManager.Instance.GetCurrentTowerPrice(towerType);
+        priceHolder.SetPriceText(towerPrice);
     }
 }

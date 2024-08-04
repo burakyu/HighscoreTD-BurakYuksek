@@ -5,12 +5,16 @@ using UnityEngine;
 
 public class EnemySpawnController : MonoBehaviour
 {
-    [SerializeField] private float initialDelay = 2;
     [SerializeField] private float delayBetweenEnemies = 5;
 
-    private void Start()
+    private void OnEnable()
     {
-        StartEnemySpawn();
+        EventManager.FirstTowerPlaced.AddListener(StartEnemySpawn);
+    }
+
+    private void OnDisable()
+    {
+        EventManager.FirstTowerPlaced.RemoveListener(StartEnemySpawn);
     }
 
     private void StartEnemySpawn()
@@ -20,8 +24,6 @@ public class EnemySpawnController : MonoBehaviour
     
     private IEnumerator EnemySpawnCoroutine()
     {
-        yield return new WaitForSeconds(initialDelay);
-
         while (true)
         {
             SpawnEnemy();

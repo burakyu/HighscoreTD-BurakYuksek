@@ -11,6 +11,8 @@ public class TurretProjectile : MonoBehaviour
     private Vector3 _initialPosition;
     private bool _distancePassed;
 
+    public TowerSettings TowerSettings => ownerTowerSettings;
+
     private void OnEnable()
     {
         _distancePassed = false;

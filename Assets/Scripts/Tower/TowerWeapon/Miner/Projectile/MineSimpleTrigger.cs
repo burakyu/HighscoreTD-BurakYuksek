@@ -7,9 +7,12 @@ public class MineSimpleTrigger : MonoBehaviour
 {
     private MineExplodeController _mineExplodeController;
 
+    private Collider _collider;
+    
     private void Awake()
     {
         _mineExplodeController = GetComponent<MineExplodeController>();
+        _collider = GetComponent<Collider>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -17,6 +20,7 @@ public class MineSimpleTrigger : MonoBehaviour
         other.TryGetComponent(out Enemy enemy);
         if (enemy != null)
         {
+            _collider.enabled = false;
             StartCoroutine(_mineExplodeController.Explode());
         }
     }

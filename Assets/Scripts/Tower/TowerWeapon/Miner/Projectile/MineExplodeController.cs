@@ -36,7 +36,7 @@ public class MineExplodeController : MonoBehaviour
 
         for (int i = 0; i < _hitCount; i++)
         {
-            int damageValue = (int) (150 / Vector3.Distance(transform.position, _targetsOnRangeColliders[i].transform.position));
+            int damageValue = (int) (_minerProjectile.TowerSettings.DamageValue / Vector3.Distance(transform.position, _targetsOnRangeColliders[i].transform.position));
             _targetsOnRangeColliders[i].GetComponent<CharacterHealthController>().ReceiveDamage(damageValue);
         }
 

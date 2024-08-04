@@ -6,8 +6,12 @@ using UnityEngine;
 
 public class BomberProjectile : MonoBehaviour
 {
+    [SerializeField] private TowerSettings ownerTowerSettings;
+
     private BombExplodeController bombExplodeController;
 
+    public TowerSettings TowerSettings => ownerTowerSettings;
+    
     private void Awake()
     {
         bombExplodeController = GetComponent<BombExplodeController>();
