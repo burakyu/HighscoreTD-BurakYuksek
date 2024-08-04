@@ -7,11 +7,13 @@ using UnityEngine;
 public class Tower : MonoBehaviour
 {
     [SerializeField] private TowerType towerType;
+    [SerializeField] private TowerSettings towerSettings;
 
     private bool _isPlaced;
     private Vector3 _despawnPosition;
     
     public TowerType TowerType => towerType;
+    public TowerSettings TowerSettings => towerSettings;
     public bool IsPlaced => _isPlaced;
     
     public void SetPlaced()

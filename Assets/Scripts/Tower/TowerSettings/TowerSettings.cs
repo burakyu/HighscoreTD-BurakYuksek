@@ -5,6 +5,6 @@ using UnityEngine;
 public class TowerSettings : ScriptableObject
 {
     public TowerType TowerType;
-    public GameObject TowerPrefab;
+    public float AttackRange;
     public List<int> TowerPricesByCount;
 }

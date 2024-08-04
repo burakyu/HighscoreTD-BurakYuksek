@@ -283,3 +283,8 @@ MonoBehaviour:
     maximumInstances: 15
     poolType: 6
     pool: {fileID: 0}
+  - prefab: {fileID: 2622409810155131920, guid: 13531e9fe3abf40368e104f3781aa4f9,
+      type: 3}
+    maximumInstances: 30
+    poolType: 7
+    pool: {fileID: 0}

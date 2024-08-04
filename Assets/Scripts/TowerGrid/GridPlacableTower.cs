@@ -13,6 +13,8 @@ public class GridPlacableTower : MonoBehaviour
     private Collider _lastGridCollider;
     private Collider _currentGridCollider;
     private Tower _tower;
+
+    public event Action<bool> OnTowerPlaced;
     
     private void OnEnable()
     {
@@ -63,6 +65,7 @@ public class GridPlacableTower : MonoBehaviour
         {
             _isDragging = false;
             _tower.SetPlaced();
+            OnTowerPlaced?.Invoke(true);
         }
         else
         {

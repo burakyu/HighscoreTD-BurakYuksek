@@ -142,10 +142,11 @@ GameObject:
   m_Component:
   - component: {fileID: 347383693551471757}
   - component: {fileID: 9101916517366809961}
+  - component: {fileID: 5226022058015639199}
   - component: {fileID: 8935622270849220900}
   - component: {fileID: 2092247186687095798}
   - component: {fileID: 5694820393741480784}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,6 +181,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0aeca018e4c14ae3871a0872cd76cbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5226022058015639199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5255781552158443718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e10ab5094b804e2eb75f59ba7eeb25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeCooldown: 0.1
+  bloodHitParticleColor: {r: 0, g: 0, b: 0, a: 0}
+  deathParticleColor: {r: 0, g: 0, b: 0, a: 0}
+  health: 100
 --- !u!195 &8935622270849220900
 NavMeshAgent:
   m_ObjectHideFlags: 0
