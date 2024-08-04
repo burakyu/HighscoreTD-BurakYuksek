@@ -42,6 +42,9 @@ public class TowerManager : MonoBehaviour
     private void DespawnTower(Tower tower)
     {
         if (!tower.IsPlaced)
+        {
+            _currentDragTower = null;
             tower.Despawn();
+        }
     }
 }

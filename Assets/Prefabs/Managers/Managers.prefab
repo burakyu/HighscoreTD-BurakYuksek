@@ -44,7 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d6437240ab741258b1b16ea05a0863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dontDestroyOnLoad: 0
   dragController: {fileID: 5745635183721071833}
 --- !u!1 &3342298770451145967
 GameObject:
@@ -90,7 +89,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1575891407834005b364a00603dc66c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dontDestroyOnLoad: 0
   towersLibrary: {fileID: 11400000, guid: e80256212c42e4253a77e9cf11a3733f, type: 2}
 --- !u!1 &3558330490057431039
 GameObject:
@@ -280,4 +278,8 @@ MonoBehaviour:
       type: 3}
     maximumInstances: 15
     poolType: 5
+    pool: {fileID: 0}
+  - prefab: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+    maximumInstances: 15
+    poolType: 6
     pool: {fileID: 0}

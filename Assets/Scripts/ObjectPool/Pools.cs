@@ -10,7 +10,8 @@ public class Pools : MonoBehaviour
         EnemyTroll,
         TowerBomber,
         TowerMiner,
-        TowerTurret
+        TowerTurret,
+        BloodParticle
     }
 
     public static string GetTypeStr(Types poolType)
