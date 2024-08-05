@@ -11,29 +11,35 @@ public class TowerCard : MonoBehaviour, IPointerDownHandler
     [SerializeField] private RectTransform holder;
     [SerializeField] private Image selectedOutlineBg;
     [SerializeField] private PriceHolderUI priceHolder;
+    [SerializeField] private RectTransform cardDisableItem;
 
     private Tween _holderMoveTween;
+    private bool _canBeSelect;
     
     public TowerType TowerType => towerType;
 
     private IEnumerator Start()
     {
-        yield return new WaitUntil(() => TowerManager.Instance != null);
+        yield return new WaitUntil(() => TowerManager.Instance != null && ResourceManager.Instance != null);
+        CheckCurrencyAvailability();
         UpdatePriceText();
     }
 
     private void OnEnable()
     {
         EventManager.TowerPlaced.AddListener(UpdatePriceText);
+        EventManager.ResourceValuesChanged.AddListener(CheckCurrencyAvailability);
     }
 
     private void OnDisable()
     {
         EventManager.TowerPlaced.RemoveListener(UpdatePriceText);
+        EventManager.ResourceValuesChanged.AddListener(CheckCurrencyAvailability);
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (!_canBeSelect) return;
         Select();
     }
     
@@ -59,5 +65,18 @@ public class TowerCard : MonoBehaviour, IPointerDownHandler
     {
         int towerPrice = TowerManager.Instance.GetCurrentTowerPrice(towerType);
         priceHolder.SetPriceText(towerPrice);
+    }
+
+    private void CheckCurrencyAvailability()
+    {
+        int towerPrice = TowerManager.Instance.GetCurrentTowerPrice(towerType);
+        bool available = ResourceManager.Instance.HasEnoughResource(ResourceType.GoldCoin, towerPrice);
+        cardDisableItem.gameObject.SetActive(!available);
+        SetCanSelect(available);
+    }
+    
+    private void SetCanSelect(bool canBeSelect)
+    {
+        _canBeSelect = canBeSelect;
     }
 }

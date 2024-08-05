@@ -12,11 +12,14 @@ public class TowerCardsHolder : MonoBehaviour
     {
         _towerCards = GetComponentsInChildren<TowerCard>().ToList();
         EventManager.TowerCardSelected.AddListener(UpdateCards);
+        EventManager.TowerPlaced.AddListener(UnselectAll);
+
     }
 
     private void OnDisable()
     {
         EventManager.TowerCardSelected.RemoveListener(UpdateCards);
+        EventManager.TowerPlaced.AddListener(UnselectAll);
     }
 
     private void UpdateCards(TowerType selectedType)
@@ -26,5 +29,11 @@ public class TowerCardsHolder : MonoBehaviour
             if (towerCard.TowerType != selectedType)
                 towerCard.Unselect();
         }
+    }
+    
+    private void UnselectAll(GridPlacableTower tower = null, TowerGrid grid = null)
+    {
+        foreach (var towerCard in _towerCards)
+            towerCard.Unselect();
     }
 }

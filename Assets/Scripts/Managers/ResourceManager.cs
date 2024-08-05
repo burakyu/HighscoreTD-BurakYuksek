@@ -14,7 +14,7 @@ public class ResourceManager : BaseSingleton<ResourceManager>
 
     private void Start()
     {
-        _resources.Add(ResourceType.GoldCoin, 0);
+        _resources.Add(ResourceType.GoldCoin, 20);
         LoadResourceData();
     }
     
