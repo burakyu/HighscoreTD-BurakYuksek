@@ -58,10 +58,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5226022058015639199, guid: dc7a3b83fb4c1435cbecb21772e61993,
+        type: 3}
+      propertyPath: health
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 5255781552158443718, guid: dc7a3b83fb4c1435cbecb21772e61993,
         type: 3}
       propertyPath: m_Name
-      value: Enemy Variant
+      value: Enemy_Troll
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -141,6 +146,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SK_Chr_Troll
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 3dc4a8b10371141e9b719f9ba0cc5e70,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3cf4ade1dda904c38afcee70c75173ff, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

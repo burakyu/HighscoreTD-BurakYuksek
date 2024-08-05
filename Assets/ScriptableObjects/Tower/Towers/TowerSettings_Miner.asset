@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TowerType: 2
   AttackRange: 7
-  DamageValue: 150
+  DamageValue: 75
+  shootInterval: 5
   TowerPricesByCount: 19000000280000004600000078000000c80000002c01000090010000f40100008a020000ee020000840300004c04000014050000

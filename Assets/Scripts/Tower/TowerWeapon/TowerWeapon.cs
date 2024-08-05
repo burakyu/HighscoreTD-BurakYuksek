@@ -8,7 +8,6 @@ public abstract class TowerWeapon : MonoBehaviour
     [SerializeField] protected TowerType towerType;
     [SerializeField] protected Pools.Types bulletPoolType;
     [SerializeField] protected LayerMask targetLayer;
-    [SerializeField] protected float shootInterval;
         
     private bool _isWeaponActive;
     private float _shootingTimer;
@@ -45,7 +44,7 @@ public abstract class TowerWeapon : MonoBehaviour
         }
 
         _shootingTimer += Time.deltaTime;
-        if (_shootingTimer >= (shootInterval / (GameBoosterController.Instance.HaveBoost() ? 2 : 1)))
+        if (_shootingTimer >= (_tower.TowerSettings.shootInterval / (GameBoosterController.Instance.HaveBoost() ? 2 : 1)))
         {
             _shootingTimer = 0f;
             Attack(Vector3.zero);

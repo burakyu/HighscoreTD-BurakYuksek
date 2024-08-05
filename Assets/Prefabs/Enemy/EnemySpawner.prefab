@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31888b5fb5c084a688b968c112aa136a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayBetweenEnemies: 2.5
+  initialDelayBetweenEnemies: 4
 --- !u!1001 &2513280713339290475
 PrefabInstance:
   m_ObjectHideFlags: 0

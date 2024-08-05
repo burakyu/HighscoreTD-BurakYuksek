@@ -61,7 +61,7 @@ PrefabInstance:
     - target: {fileID: 5255781552158443718, guid: dc7a3b83fb4c1435cbecb21772e61993,
         type: 3}
       propertyPath: m_Name
-      value: Enemy Variant
+      value: Enemy_Tiny
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -141,6 +141,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SK_Chr_Tiny
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 27df16f7066df455980ecaaffbe34d57,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3cf4ade1dda904c38afcee70c75173ff, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
