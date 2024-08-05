@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f741d9fc731f4493ab48093cf010da88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ownerTowerSettings: {fileID: 11400000, guid: 15a3c4967d30b40709f7e992f454a71d, type: 2}
   mineTriggerCollider: {fileID: 2340740865722344401}
 --- !u!114 &7564555934033043109
 MonoBehaviour:

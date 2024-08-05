@@ -19,7 +19,7 @@ public class TurretProjectileRaycastController : MonoBehaviour
     {
         if (Physics.SphereCast(transform.position, 0.4f, transform.forward, out var hit,0.25f, projectileHitLayers))
         {
-            hit.collider.GetComponent<CharacterHealthController>().ReceiveDamage(_projectile.TowerSettings.DamageValue);
+            hit.collider.GetComponent<EnemyHealthController>().ReceiveDamage(_projectile.TowerSettings.DamageValue);
         }
     }
 

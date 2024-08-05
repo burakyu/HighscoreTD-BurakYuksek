@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 350522235008378360}
   - component: {fileID: 7383336572242011645}
   - component: {fileID: 4574643728701597759}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: EnemyCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,10 +193,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e10ab5094b804e2eb75f59ba7eeb25e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shakeCooldown: 0.1
-  bloodHitParticleColor: {r: 0, g: 0, b: 0, a: 0}
-  deathParticleColor: {r: 0, g: 0, b: 0, a: 0}
   health: 100
+  characterPoolType: 0
 --- !u!195 &8935622270849220900
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -218,7 +216,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 0
 --- !u!136 &2092247186687095798
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -382,6 +380,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3385698551225315021, guid: 3b2dbd200946c4f6bbd81c973fc2c82e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5588431868520064996, guid: 3b2dbd200946c4f6bbd81c973fc2c82e,
         type: 3}
       propertyPath: m_SizeDelta.y
@@ -391,6 +394,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HealthBarCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5999210118873832208, guid: 3b2dbd200946c4f6bbd81c973fc2c82e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139443659974986249, guid: 3b2dbd200946c4f6bbd81c973fc2c82e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

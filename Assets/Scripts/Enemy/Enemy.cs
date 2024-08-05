@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     private void OnEnable()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
-        SetTarget(new Vector3(0,0,-6));
+        SetTarget(new Vector3(0,0,-11));
     }
 
     public void SetTarget(Vector3 pos)

@@ -10,4 +10,6 @@ public static class EventManager
     public static UnityEvent<GridPlacableTower, TowerGrid> TowerPlaced = new UnityEvent<GridPlacableTower, TowerGrid>();
     public static UnityEvent FirstTowerPlaced = new UnityEvent();
     public static UnityEvent ResourceValuesChanged = new UnityEvent();
+    public static UnityEvent MainTowerLosed = new UnityEvent();
+    public static UnityEvent RestartGame = new UnityEvent();
 }

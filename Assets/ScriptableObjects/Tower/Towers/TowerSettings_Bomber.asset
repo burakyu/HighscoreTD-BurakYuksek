@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: TowerSettings_Bomber
   m_EditorClassIdentifier: 
   TowerType: 1
-  AttackRange: 6
+  AttackRange: 7
   DamageValue: 100
   TowerPricesByCount: 0a00000019000000320000005000000078000000aa000000e60000002c01000090010000f40100008a020000bc02000084030000

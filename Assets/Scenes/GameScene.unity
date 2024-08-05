@@ -561,6 +561,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2863677770027579296, guid: e9b98294bcc514bfcb5f65bb2de4e757,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3383585914020457754, guid: e9b98294bcc514bfcb5f65bb2de4e757,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -752,41 +757,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CameraController
-      objectReference: {fileID: 0}
-    - target: {fileID: 5382094680077131796, guid: f5d121d0994124a4abae83f465d3facc,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5382094680077131796, guid: f5d121d0994124a4abae83f465d3facc,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 39
-      objectReference: {fileID: 0}
-    - target: {fileID: 5382094680077131796, guid: f5d121d0994124a4abae83f465d3facc,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -13
-      objectReference: {fileID: 0}
-    - target: {fileID: 5382094680077131796, guid: f5d121d0994124a4abae83f465d3facc,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5382094680077131796, guid: f5d121d0994124a4abae83f465d3facc,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5382094680077131796, guid: f5d121d0994124a4abae83f465d3facc,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5382094680077131796, guid: f5d121d0994124a4abae83f465d3facc,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5382094680077131796, guid: f5d121d0994124a4abae83f465d3facc,
         type: 3}
