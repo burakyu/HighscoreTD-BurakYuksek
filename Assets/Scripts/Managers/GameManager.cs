@@ -4,6 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : BaseSingleton<GameManager>
 {
+    [SerializeField] private GameSettings gameSettings;
+
+    public GameSettings GameSettings => gameSettings;
+    
     void Start()
     {
 #if UNITY_IOS || UNITY_ANDROID

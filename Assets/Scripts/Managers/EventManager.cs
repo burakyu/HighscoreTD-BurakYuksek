@@ -12,4 +12,7 @@ public static class EventManager
     public static UnityEvent ResourceValuesChanged = new UnityEvent();
     public static UnityEvent MainTowerLosed = new UnityEvent();
     public static UnityEvent RestartGame = new UnityEvent();
+    public static UnityEvent<int> AddBoost = new UnityEvent<int>();
+    public static UnityEvent BoostValueCompleted = new UnityEvent();
+    public static UnityEvent BoostUsed = new UnityEvent();
 }

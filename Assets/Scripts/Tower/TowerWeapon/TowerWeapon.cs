@@ -45,7 +45,7 @@ public abstract class TowerWeapon : MonoBehaviour
         }
 
         _shootingTimer += Time.deltaTime;
-        if (_shootingTimer >= shootInterval)
+        if (_shootingTimer >= (shootInterval / (GameBoosterController.Instance.HaveBoost() ? 2 : 1)))
         {
             _shootingTimer = 0f;
             Attack(Vector3.zero);

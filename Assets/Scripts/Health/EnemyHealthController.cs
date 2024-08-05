@@ -33,6 +33,7 @@ public class EnemyHealthController : HealthController
         base.Die();
         _navMeshAgent.isStopped = true;
         _characterAnimator.SetTrigger("Die");
+        EventManager.AddBoost.Invoke(GameManager.Instance.GameSettings.BoosterIncreaseValuePerEnemy);
         DOVirtual.DelayedCall(1.5f, () =>
         {
             PoolManager.Instance.Despawn(characterPoolType, gameObject);
