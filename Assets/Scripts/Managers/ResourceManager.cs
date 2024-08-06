@@ -70,20 +70,10 @@ public class ResourceManager : BaseSingleton<ResourceManager>
     
     private void LoadResourceData()
     {
-        // if (SaveManager.Instance.LoadSaveData<Dictionary<ResourceType, int>>("ResourceData") != null)
-        // {
-        //     foreach (var resourceData in SaveManager.Instance.LoadSaveData<Dictionary<ResourceType, int>>("ResourceData"))
-        //     {
-        //         Player.Instance.ResourceBag.Resources.Add(resourceData.Key, resourceData.Value);
-        //     }
-        //     UpdateUI();
-        // }
     }
 
     public void SaveResourceData()
     {
-        //_saveData.ResourceTypesAndAmounts = _resources;
-        //SaveManager.Instance.SaveData("ResourceData", Player.Instance.ResourceBag.Resources);
     }
 
     public ResourceInfo GetCollectableDataFromType(ResourceType type)

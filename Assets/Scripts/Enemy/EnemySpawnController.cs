@@ -61,16 +61,16 @@ public class EnemySpawnController : MonoBehaviour
         }
         else if (_sessionEnemyDifficultyTimer < 60)
         {
-            if (randomValueForEnemySelection < 40)
+            if (randomValueForEnemySelection < 25)
                 enemyType = Pools.Types.EnemyTiny;
-            else if(randomValueForEnemySelection < 80)
+            else if(randomValueForEnemySelection < 85)
                 enemyType = Pools.Types.EnemyDefault;
             else if(randomValueForEnemySelection <= 100)
                 enemyType = Pools.Types.EnemyTroll;
         }
         else if (_sessionEnemyDifficultyTimer >= 60)
         { 
-            if(randomValueForEnemySelection < 30)
+            if(randomValueForEnemySelection < 15)
                 enemyType = Pools.Types.EnemyDefault;
             else if(randomValueForEnemySelection <= 100)
                 enemyType = Pools.Types.EnemyTroll;

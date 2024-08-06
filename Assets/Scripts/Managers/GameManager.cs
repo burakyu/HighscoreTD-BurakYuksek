@@ -15,12 +15,6 @@ public class GameManager : BaseSingleton<GameManager>
         Application.targetFrameRate = 60;
 #endif
     }
-    
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha2)) Time.timeScale = 2;
-        if (Input.GetKeyDown(KeyCode.Alpha3)) Time.timeScale = 3;
-    }
 
     private void OnEnable()
     {
